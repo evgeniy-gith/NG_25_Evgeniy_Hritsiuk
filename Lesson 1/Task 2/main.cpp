@@ -1,0 +1,79 @@
+#include <iostream>;
+#include <math.h>;
+using namespace std;
+int main() {
+    double num1, num2, result;
+    int operation;
+    setlocale(LC_ALL, "Rus");
+
+    cout << "Выберите оперецию (+, -, *, /,^, sqrt): " << endl;
+    cout << "\nВыберите одну из доступных операций:" << endl;
+    cout << "  '1' - Сложение" << endl;
+    cout << "  '2' - Вычитание" << endl;
+    cout << "  '3' - Умножение" << endl;
+    cout << "  '4' - Деление" << endl;
+    cout << "  '5' - Возведение в степень" << endl;
+    cout << "  '6' - Квадратный корень\n ";
+    cout << "Ваш выбор: ";
+    cin >> operation;
+    switch (operation) {
+    case 1: '1';
+        cout << "Введите первое число:\n ";
+        cin >> num1;
+        cout << "Введите второе число:\n ";
+        cin >> num2;
+        result = num1 + num2;
+        cout << "Результат: " << result;
+        break;
+    case 2: '2';
+        cout << "Введите первое число: ";
+        cin >> num1;
+        cout << "Введите второе число: ";
+        cin >> num2;
+        result = num1 - num2;
+        cout << "Результат: " << result;
+        break;
+    case 3: '3';
+        cout << "Введите первое число: ";
+        cin >> num1;
+        cout << "Введите второе число: ";
+        cin >> num2;
+        result = num1 * num2;
+        cout << "Результат: " << result;
+        break;
+    case 4: '4';
+        cout << "Введите первое число: ";
+        cin >> num1;
+        cout << "Введите второе число: ";
+        cin >> num2;
+        if (num2 != 0) {
+            result = num1 / num2;
+            cout << "Результат: " << result;
+        }
+        else {
+            cout << "Ошибка";
+        }
+        break;
+    case 5: '5';
+        cout << "Введите число: ";
+        cin >> num1;
+        cout << "Введите число в которое хотите возвести степень: ";
+        cin >> num2;
+        result = pow(num1, num2);
+        cout << "Результат: " << result;
+        break;
+    case 6: '6';
+        cout << "Введите число: ";
+        cin >> num1;
+        if (num1 >= 0) {
+            result = sqrt(num1);
+            cout << "Результат: " << result;
+        }
+        else {
+            cout << "Ошибка";
+        }
+        break;
+    default:
+        cout << "Вы выбрали не существующию операцию";
+    }
+}
